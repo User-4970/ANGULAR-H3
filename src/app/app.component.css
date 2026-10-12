@@ -1,0 +1,161 @@
+﻿.app-shell {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: #111827;
+  color: #f3f4f6;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.app-shell[data-theme='light'] {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.exercise-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+}
+
+.app-shell[data-theme='light'] .exercise-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(148, 163, 184, 0.38);
+}
+
+h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+
+.task-title {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+
+p {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+}
+
+.status-block {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.status-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.status {
+  display: inline-block;
+  min-width: 5rem;
+  text-transform: lowercase;
+}
+
+.status-online {
+  color: #34d399;
+}
+
+.status-away {
+  color: #fbbf24;
+}
+
+.status-offline {
+  color: #ef4444;
+}
+
+.status-select-wrap,
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+select {
+  min-width: 170px;
+  min-height: 42px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(17, 24, 39, 0.8);
+  color: inherit;
+  font: inherit;
+}
+
+.app-shell[data-theme='light'] select {
+  background: #fff;
+  color: #111827;
+}
+
+pre {
+  margin: 0.75rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.35);
+  color: #e2e8f0;
+  overflow-x: auto;
+}
+
+.app-shell[data-theme='light'] pre {
+  background: rgba(148, 163, 184, 0.12);
+  color: #0f172a;
+}
+
+.students-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.student-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+}
+
+.dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.student-name {
+  min-width: 5rem;
+  font-weight: 600;
+}
+
+.student-score {
+  font-weight: 700;
+}
+
+.legend {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  color: inherit;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    padding: 1.25rem 0.8rem;
+  }
+
+  .status-block,
+  .theme-toggle {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

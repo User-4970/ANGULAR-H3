@@ -1,0 +1,58 @@
+﻿<main class="app-shell" [attr.data-theme]="theme">
+  <section class="exercise-card">
+    <h2>Статус підключення (динамічний стиль)</h2>
+    <p class="task-title">Умова:</p>
+    <p>Показати текст "Статус: ..."</p>
+    <p>Стилі тексту змінюються залежно від значення: online, away, offline.</p>
+
+    <div class="status-block">
+      <p class="status-label">
+        Статус:
+        <span [class]="getStatusClass()">{{ statusText }}</span>
+      </p>
+      <label class="status-select-wrap" for="statusSelect">
+        <select id="statusSelect" [(ngModel)]="status">
+          <option value="online">Онлайн</option>
+          <option value="away">Відійшов</option>
+          <option value="offline">Офлайн</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section class="exercise-card">
+    <h2>Балi/оцінки – колір за значенням</h2>
+    <p class="task-title">Умова:</p>
+    <p>Є список студентів та їхні бали.</p>
+    <pre>{{ students | json }}</pre>
+
+    <div class="students-list">
+      @for (student of students; track student.name) {
+        <div class="student-row">
+          <span class="dot" [style.background]="getScoreColor(student.score)"></span>
+          <span class="student-name">{{ student.name }}</span>
+          <span class="student-score" [style.color]="getScoreColor(student.score)">
+            {{ student.score }} балів
+          </span>
+        </div>
+      }
+    </div>
+
+    <p class="legend">Вивести: зелений колір, якщо бал ≥ 80, жовтий, якщо ≥ 50, червоний, якщо &lt; 50.</p>
+  </section>
+
+  <section class="exercise-card">
+    <h2>Темна/світла тема</h2>
+    <p class="task-title">Умова:</p>
+    <p>Зроби перемикач теми (dark/light) через чекбокс або select.</p>
+    <p>Змінюється фон та колір тексту всього компонента.</p>
+
+    <label class="theme-toggle" for="themeToggle">
+      <span>Використовуйте:</span>
+      <select id="themeToggle" [(ngModel)]="theme">
+        <option value="dark">dark-theme</option>
+        <option value="light">light-theme</option>
+      </select>
+    </label>
+  </section>
+</main>

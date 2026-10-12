@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
+  <title>FirstAngularProject</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="stylesheet" href="styles.css"><style ng-app-id="ng">
+.app-shell[_ngcontent-ng-c304232815] {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  background: #111827;
+  color: #f3f4f6;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+.app-shell[data-theme=light][_ngcontent-ng-c304232815] {
+  background: #f3f4f6;
+  color: #111827;
+}
+.exercise-card[_ngcontent-ng-c304232815] {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  border-radius: 16px;
+  padding: 1.25rem 1.4rem;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.18);
+}
+.app-shell[data-theme=light][_ngcontent-ng-c304232815]   .exercise-card[_ngcontent-ng-c304232815] {
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(148, 163, 184, 0.38);
+}
+h2[_ngcontent-ng-c304232815] {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+}
+.task-title[_ngcontent-ng-c304232815] {
+  margin: 0 0 0.4rem;
+  font-weight: 700;
+}
+p[_ngcontent-ng-c304232815] {
+  margin: 0.25rem 0;
+  line-height: 1.6;
+}
+.status-block[_ngcontent-ng-c304232815] {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.status-label[_ngcontent-ng-c304232815] {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.status[_ngcontent-ng-c304232815] {
+  display: inline-block;
+  min-width: 5rem;
+  text-transform: lowercase;
+}
+.status-online[_ngcontent-ng-c304232815] {
+  color: #34d399;
+}
+.status-away[_ngcontent-ng-c304232815] {
+  color: #fbbf24;
+}
+.status-offline[_ngcontent-ng-c304232815] {
+  color: #ef4444;
+}
+.status-select-wrap[_ngcontent-ng-c304232815], 
+.theme-toggle[_ngcontent-ng-c304232815] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+select[_ngcontent-ng-c304232815] {
+  min-width: 170px;
+  min-height: 42px;
+  padding: 0.55rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(17, 24, 39, 0.8);
+  color: inherit;
+  font: inherit;
+}
+.app-shell[data-theme=light][_ngcontent-ng-c304232815]   select[_ngcontent-ng-c304232815] {
+  background: #fff;
+  color: #111827;
+}
+pre[_ngcontent-ng-c304232815] {
+  margin: 0.75rem 0;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.35);
+  color: #e2e8f0;
+  overflow-x: auto;
+}
+.app-shell[data-theme=light][_ngcontent-ng-c304232815]   pre[_ngcontent-ng-c304232815] {
+  background: rgba(148, 163, 184, 0.12);
+  color: #0f172a;
+}
+.students-list[_ngcontent-ng-c304232815] {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.student-row[_ngcontent-ng-c304232815] {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+}
+.dot[_ngcontent-ng-c304232815] {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  display: inline-block;
+}
+.student-name[_ngcontent-ng-c304232815] {
+  min-width: 5rem;
+  font-weight: 600;
+}
+.student-score[_ngcontent-ng-c304232815] {
+  font-weight: 700;
+}
+.legend[_ngcontent-ng-c304232815] {
+  margin-top: 0.9rem;
+  font-size: 0.95rem;
+  color: inherit;
+}
+@media (max-width: 560px) {
+  .app-shell[_ngcontent-ng-c304232815] {
+    padding: 1.25rem 0.8rem;
+  }
+  .status-block[_ngcontent-ng-c304232815], 
+   .theme-toggle[_ngcontent-ng-c304232815] {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=/app.component.css.map */</style></head>
+<body><!--nghm--><script type="text/javascript" id="ng-event-dispatch-contract">(()=>{function p(t,n,r,o,e,i,f,m){return{eventType:t,event:n,targetElement:r,eic:o,timeStamp:e,eia:i,eirp:f,eiack:m}}function u(t){let n=[],r=e=>{n.push(e)};return{c:t,q:n,et:[],etc:[],d:r,h:e=>{r(p(e.type,e,e.target,t,Date.now()))}}}function s(t,n,r){for(let o=0;o<n.length;o++){let e=n[o];(r?t.etc:t.et).push(e),t.c.addEventListener(e,t.h,r)}}function c(t,n,r,o,e=window){let i=u(t);e._ejsas||(e._ejsas={}),e._ejsas[n]=i,s(i,r),s(i,o,!0)}window.__jsaction_bootstrap=c;})();
+</script><script>window.__jsaction_bootstrap(document.body,"ng",["change"],["blur"]);</script>
+  <app-root ng-version="22.2.0" _nghost-ng-c304232815="" ngh="0" ng-server-context="ssg"><main _ngcontent-ng-c304232815="" class="app-shell" data-theme="dark"><section _ngcontent-ng-c304232815="" class="exercise-card"><h2 _ngcontent-ng-c304232815="">Статус підключення (динамічний стиль)</h2><p _ngcontent-ng-c304232815="" class="task-title">Умова:</p><p _ngcontent-ng-c304232815="">Показати текст "Статус: ..."</p><p _ngcontent-ng-c304232815="">Стилі тексту змінюються залежно від значення: online, away, offline.</p><div _ngcontent-ng-c304232815="" class="status-block"><p _ngcontent-ng-c304232815="" class="status-label"> Статус: <span _ngcontent-ng-c304232815="" class="status status-online">online</span></p><label _ngcontent-ng-c304232815="" for="statusSelect" class="status-select-wrap"><select _ngcontent-ng-c304232815="" id="statusSelect" class="ng-untouched ng-pristine ng-valid" jsaction="change:;blur:;"><option _ngcontent-ng-c304232815="" value="online">Онлайн</option><option _ngcontent-ng-c304232815="" value="away">Відійшов</option><option _ngcontent-ng-c304232815="" value="offline">Офлайн</option></select></label></div></section><section _ngcontent-ng-c304232815="" class="exercise-card"><h2 _ngcontent-ng-c304232815="">Балi/оцінки – колір за значенням</h2><p _ngcontent-ng-c304232815="" class="task-title">Умова:</p><p _ngcontent-ng-c304232815="">Є список студентів та їхні бали.</p><pre _ngcontent-ng-c304232815="">[
+  {
+    "name": "Катя",
+    "score": 92
+  },
+  {
+    "name": "Максим",
+    "score": 76
+  },
+  {
+    "name": "Оля",
+    "score": 44
+  }
+]</pre><div _ngcontent-ng-c304232815="" class="students-list"><div _ngcontent-ng-c304232815="" class="student-row"><span _ngcontent-ng-c304232815="" class="dot" style="background: #22c55e;"></span><span _ngcontent-ng-c304232815="" class="student-name">Катя</span><span _ngcontent-ng-c304232815="" class="student-score" style="color: #22c55e;"> 92 балів </span></div><div _ngcontent-ng-c304232815="" class="student-row"><span _ngcontent-ng-c304232815="" class="dot" style="background: #fbbf24;"></span><span _ngcontent-ng-c304232815="" class="student-name">Максим</span><span _ngcontent-ng-c304232815="" class="student-score" style="color: #fbbf24;"> 76 балів </span></div><div _ngcontent-ng-c304232815="" class="student-row"><span _ngcontent-ng-c304232815="" class="dot" style="background: #ef4444;"></span><span _ngcontent-ng-c304232815="" class="student-name">Оля</span><span _ngcontent-ng-c304232815="" class="student-score" style="color: #ef4444;"> 44 балів </span></div><!--container--></div><p _ngcontent-ng-c304232815="" class="legend">Вивести: зелений колір, якщо бал ≥ 80, жовтий, якщо ≥ 50, червоний, якщо &lt; 50.</p></section><section _ngcontent-ng-c304232815="" class="exercise-card"><h2 _ngcontent-ng-c304232815="">Темна/світла тема</h2><p _ngcontent-ng-c304232815="" class="task-title">Умова:</p><p _ngcontent-ng-c304232815="">Зроби перемикач теми (dark/light) через чекбокс або select.</p><p _ngcontent-ng-c304232815="">Змінюється фон та колір тексту всього компонента.</p><label _ngcontent-ng-c304232815="" for="themeToggle" class="theme-toggle"><span _ngcontent-ng-c304232815="">Використовуйте:</span><select _ngcontent-ng-c304232815="" id="themeToggle" class="ng-untouched ng-pristine ng-valid" jsaction="change:;blur:;"><option _ngcontent-ng-c304232815="" value="dark">dark-theme</option><option _ngcontent-ng-c304232815="" value="light">light-theme</option></select></label></section></main></app-root>
+<script src="main.js" type="module"></script>
+
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"35":"t0"},"c":{"35":[{"i":"t0","r":1,"x":3}]}}]}</script></body></html>
